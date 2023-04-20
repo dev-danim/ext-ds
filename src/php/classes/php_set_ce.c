@@ -286,8 +286,8 @@ void php_ds_register_set()
         PHP_DS_ME(Set, getIterator)
 
         PHP_DS_ME(Set, offsetExists)
-        PHP_DS_ME(Set, offsetGet) 
-        PHP_DS_ME(Set, offsetSet) 
+        PHP_DS_ME(Set, offsetGet)
+        PHP_DS_ME(Set, offsetSet)
         PHP_DS_ME(Set, offsetUnset)
 
         PHP_DS_COLLECTION_ME_LIST(Set)
@@ -297,7 +297,7 @@ void php_ds_register_set()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(Set), methods);
 
     php_ds_set_ce = zend_register_internal_class(&ce);
-    php_ds_set_ce->ce_flags      |= ZEND_ACC_FINAL;
+    //php_ds_set_ce->ce_flags      |= ZEND_ACC_FINAL;
     php_ds_set_ce->create_object  = php_ds_set_create_object;
     php_ds_set_ce->get_iterator   = php_ds_set_get_iterator;
     php_ds_set_ce->serialize      = php_ds_set_serialize;

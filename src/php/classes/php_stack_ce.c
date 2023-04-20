@@ -137,8 +137,8 @@ void php_ds_register_stack()
         PHP_DS_ME(Stack, getIterator)
 
         PHP_DS_ME(Stack, offsetExists)
-        PHP_DS_ME(Stack, offsetGet) 
-        PHP_DS_ME(Stack, offsetSet) 
+        PHP_DS_ME(Stack, offsetGet)
+        PHP_DS_ME(Stack, offsetSet)
         PHP_DS_ME(Stack, offsetUnset)
 
         PHP_DS_COLLECTION_ME_LIST(Stack)
@@ -148,14 +148,14 @@ void php_ds_register_stack()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(Stack), methods);
 
     php_ds_stack_ce = zend_register_internal_class(&ce);
-    php_ds_stack_ce->ce_flags      |= ZEND_ACC_FINAL;
+    //php_ds_stack_ce->ce_flags      |= ZEND_ACC_FINAL;
     php_ds_stack_ce->create_object  = php_ds_stack_create_object;
     php_ds_stack_ce->get_iterator   = php_ds_stack_get_iterator;
     php_ds_stack_ce->serialize      = php_ds_stack_serialize;
     php_ds_stack_ce->unserialize    = php_ds_stack_unserialize;
 
-    zend_class_implements(php_ds_stack_ce, 2, 
-        collection_ce, 
+    zend_class_implements(php_ds_stack_ce, 2,
+        collection_ce,
         zend_ce_arrayaccess
     );
 

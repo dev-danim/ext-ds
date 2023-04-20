@@ -110,7 +110,7 @@ void php_ds_register_priority_queue()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(PriorityQueue), methods);
 
     php_ds_priority_queue_ce = zend_register_internal_class(&ce);
-    php_ds_priority_queue_ce->ce_flags      |= ZEND_ACC_FINAL;
+    //php_ds_priority_queue_ce->ce_flags      |= ZEND_ACC_FINAL;
     php_ds_priority_queue_ce->create_object  = php_ds_priority_queue_create_object;
     php_ds_priority_queue_ce->get_iterator   = php_ds_priority_queue_get_iterator;
     php_ds_priority_queue_ce->serialize      = php_ds_priority_queue_serialize;

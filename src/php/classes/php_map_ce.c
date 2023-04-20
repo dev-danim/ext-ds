@@ -350,8 +350,8 @@ void php_ds_register_map()
         PHP_DS_ME(Map, getIterator)
 
         PHP_DS_ME(Map, offsetExists)
-        PHP_DS_ME(Map, offsetGet) 
-        PHP_DS_ME(Map, offsetSet) 
+        PHP_DS_ME(Map, offsetGet)
+        PHP_DS_ME(Map, offsetSet)
         PHP_DS_ME(Map, offsetUnset)
 
         PHP_DS_COLLECTION_ME_LIST(Map)
@@ -361,7 +361,7 @@ void php_ds_register_map()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(Map), methods);
 
     php_ds_map_ce = zend_register_internal_class(&ce);
-    php_ds_map_ce->ce_flags      |= ZEND_ACC_FINAL;
+    //php_ds_map_ce->ce_flags      |= ZEND_ACC_FINAL;
     php_ds_map_ce->create_object  = php_ds_map_create_object;
     php_ds_map_ce->get_iterator   = php_ds_map_get_iterator;
     php_ds_map_ce->serialize      = php_ds_map_serialize;
@@ -372,9 +372,9 @@ void php_ds_register_map()
         STR_AND_LEN("MIN_CAPACITY"),
         DS_HTABLE_MIN_CAPACITY
     );
-    
-    zend_class_implements(php_ds_map_ce, 2, 
-        collection_ce, 
+
+    zend_class_implements(php_ds_map_ce, 2,
+        collection_ce,
         zend_ce_arrayaccess
     );
 

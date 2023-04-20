@@ -58,7 +58,7 @@ void php_ds_register_pair()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(Pair), methods);
     php_ds_pair_ce = zend_register_internal_class(&ce);
 
-    php_ds_pair_ce->ce_flags         |= ZEND_ACC_FINAL;
+    //php_ds_pair_ce->ce_flags         |= ZEND_ACC_FINAL;
     php_ds_pair_ce->create_object     = php_ds_pair_create_object;
     php_ds_pair_ce->serialize         = php_ds_pair_serialize;
     php_ds_pair_ce->unserialize       = php_ds_pair_unserialize;
