@@ -361,7 +361,7 @@ void php_ds_register_map()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(Map), methods);
 
     php_ds_map_ce = zend_register_internal_class(&ce);
-    php_ds_map_ce->ce_flags      |= ZEND_ACC_FINAL;
+    //php_ds_map_ce->ce_flags      |= ZEND_ACC_FINAL;
     php_ds_map_ce->create_object  = php_ds_map_create_object;
     php_ds_map_ce->get_iterator   = php_ds_map_get_iterator;
     php_ds_map_ce->serialize      = php_ds_map_serialize;
