@@ -148,7 +148,7 @@ void php_ds_register_stack()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(Stack), methods);
 
     php_ds_stack_ce = zend_register_internal_class(&ce);
-    //php_ds_stack_ce->ce_flags      |= ZEND_ACC_FINAL;
+    php_ds_stack_ce->ce_flags      |= ZEND_ACC_FINAL;
     php_ds_stack_ce->create_object  = php_ds_stack_create_object;
     php_ds_stack_ce->get_iterator   = php_ds_stack_get_iterator;
     php_ds_stack_ce->serialize      = php_ds_stack_serialize;

@@ -297,7 +297,7 @@ void php_ds_register_set()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(Set), methods);
 
     php_ds_set_ce = zend_register_internal_class(&ce);
-    //php_ds_set_ce->ce_flags      |= ZEND_ACC_FINAL;
+    php_ds_set_ce->ce_flags      |= ZEND_ACC_FINAL;
     php_ds_set_ce->create_object  = php_ds_set_create_object;
     php_ds_set_ce->get_iterator   = php_ds_set_get_iterator;
     php_ds_set_ce->serialize      = php_ds_set_serialize;

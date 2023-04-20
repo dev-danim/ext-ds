@@ -145,7 +145,7 @@ void php_ds_register_queue()
     INIT_CLASS_ENTRY(ce, PHP_DS_NS(Queue), methods);
 
     php_ds_queue_ce = zend_register_internal_class(&ce);
-    //php_ds_queue_ce->ce_flags      |= ZEND_ACC_FINAL;
+    php_ds_queue_ce->ce_flags      |= ZEND_ACC_FINAL;
     php_ds_queue_ce->create_object  = php_ds_queue_create_object;
     php_ds_queue_ce->get_iterator   = php_ds_queue_get_iterator;
     php_ds_queue_ce->serialize      = php_ds_queue_serialize;
